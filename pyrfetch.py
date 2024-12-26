@@ -22,6 +22,11 @@ CONFIG_FILE = CONFIG_DIR / 'config.json'
 CACHE_DIR = CONFIG_DIR / 'cache'
 LOG_FILE = CONFIG_DIR / 'sysinfo.log'
 
+# CONFIG_DIR = os.path.join(os.path.expanduser("~"), '.config', 'pyrfetch')
+# CONFIG_FILE = os.path.join(CONFIG_DIR, 'config.json')
+# CACHE_DIR = os.path.join(CONFIG_DIR, 'cache')
+# LOG_FILE = os.path.join(CONFIG_DIR, 'sysinfo.log')
+
 COLORS = {
     "default": "\033[0m",
     "white": "\033[37m",
