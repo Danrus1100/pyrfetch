@@ -229,7 +229,7 @@ class SystemInfo:
                           format='%(asctime)s - %(levelname)s - %(message)s')
         self.logger = logging.getLogger('SystemInfo')
 
-    def get_os_name(self):
+    def get_os_name(self): #CHEKED
         os_patterns = {
             "arch": "Arch", "gentoo": "Gentoo", "ubuntu": "Ubuntu", "fedora": "Fedora",
             "kali": "Kali", "debian": "Debian", "linuxmint": "Mint", "pop!_os": "Pop",
@@ -247,7 +247,7 @@ class SystemInfo:
                 return "macOS"
         return "Default"
 
-    def get_cpu_info(self):
+    def get_cpu_info(self): #CHEKED
         if platform.system() == "Darwin":
             try:
                 return subprocess.run(["sysctl", "-n", "machdep.cpu.brand_string"],
@@ -263,7 +263,7 @@ class SystemInfo:
             pass 
         return "Unknown"
 
-    def get_gpu_info(self):
+    def get_gpu_info(self): #CHEKED
         if shutil.which("nvidia-smi"):
             try:
                 result = subprocess.run(["nvidia-smi", "--query-gpu=name", "--format=csv,noheader"],

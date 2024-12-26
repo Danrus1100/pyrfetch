@@ -41,6 +41,7 @@ class TestOSDetection(unittest.TestCase):
         print(f"\nPerformance over {self.iterations} iterations:")
         print(f"os-release method: {os_release_time:.4f} seconds")
         print(f"platform method: {platform_time:.4f} seconds")
+        print(f"Improvement: {((os_release_time - platform_time) / os_release_time) * 100:.2f}%")
         
         # Store results for comparison
         self.assertIsInstance(os_release_time, float)
